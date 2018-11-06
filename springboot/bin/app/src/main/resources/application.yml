@@ -1,0 +1,35 @@
+server:
+  port: 8080
+  error:
+    path: /
+
+database:
+  type: mysql
+  host: 127.0.0.1
+  port: 3306
+  username: root
+  password: password
+
+company:
+  name: firewolf
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/student?characterEncoding=UTF-8
+    username: root
+    password: password
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: upadte
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  jpd:
+    hibernate:
+      ddl-auto: update
